@@ -9,7 +9,7 @@ Welcome to my ICS4U portfolio. I’ll use this site to post my work and reflecti
 ## Culminating Project
 My IPO chart
 
-My Methods Table
+My Methods Table: [methodTable](./posts/Methods_Table)
 
 My PseudoCode: [code](./posts/PseudoCode_)
 
