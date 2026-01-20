@@ -7,7 +7,7 @@ Welcome to my ICS4U portfolio. I’ll use this site to post my work and reflecti
 - 📝 Blog/Reflection: [Reflection #1](./posts/first_reflection.md)
 
 ## Culminating Project
-My IPO chart
+My IPO chart:[IPO chart](./posts/IPO_Chart)
 
 My Methods Table: [methodTable](./posts/Methods_Table)
 
