@@ -1,0 +1,127 @@
+Method Descriptions
+
+Method Name/Type
+Description
+Application
+Algorithm 
+mousePressed()
+This method will be used to create the many different buttons that will be used in the game. Some of their buttons being the play buttons, character choice, upgrading skills, and most importantly completing combination moves
+This method will be used for the play button, upgrade buttons, purchase buttons, character choice buttons, move completing buttons, and the pause buttons.
+mousePressed()
+START
+IF (MouseX and MouseY press “rectangle start”)
+	START
+	Return (boolean) Start = true;
+	END
+END
+BooleanUpgradeScreen()
+The upgrade Screen is accessible from the home page when the upgrade button is clicked. When player click that button this method will create the background and look of the screen while monitoring for the players pressing any purchasing button or the back button
+The upgrade screen will be used in the start of the game as an added area of interest for the player for them to want to play again.
+UpgradeScreen (LoadUpgradeScreen == True)
+START
+Background (white screen)
+Rectangles x3 
+Text x3 (SkillButtonPressed == true)
+	START
+	(int)bones = bones – 100
+	Skilldamage =Skill Damage + SkillUpgrade
+	END
+END
+
+
+BooleanLevelUpdation()
+This Method is used to create the multiple levels to my game. Each level is built upon the last using this function to change the picture to a new one in the array and to add to the opponents health and damage so it is more difficult to defeat than the last. This function also resets times, different dependent functions, and player health.
+This function will kick in when the opponents health reaches zero.This method will increase all factors and allow for a make of 3 level updations
+Boolean LevelUpdation (levelupdate == True)
+START
+Background = (change to next in array)
+Opponent = Opponent 2 or FinalBoss (array)
+Opponent health = opponent health + Healthupdate
+OpponentDamage = OpponentDamage + DamageUpdation
+END
+Void endingScreen()
+When the player loses the game this method will create and ending screen with a button that allows the user to go back to the home screen to try playing the game again
+The ending screen will appear when the player's health is equal to zero. This will stop the play function and create the “you lose” screen. This will also create the back home button which allow the user to play the game
+Void endingScreen (endScreen = true)
+START
+Background (ending background)
+Text (“you lose”)
+Rectangle (BackHomeButton)
+IF (backHomePressed = true)
+	START
+	HomeScreen = true
+	END
+END
+
+
+Boolean RestartGame()
+This method resets variable, changes picture, and changes all need booleans to restart the game and allow the player to try the game again starting from the first fight
+This method will restart the game and reset all the variables to their starting values. 
+Boolean RestartGame (restartGame == true)
+START
+Reset Character damage
+Reset Character Health
+Reset opponent health
+Reset background
+END
+
+
+Void PausingGame()
+This Method allows the user to pause the game while they are in battle. This method will also create a back to home option and a friendly reminder about the restarting button if needed.
+This method will pause the game and allow the user to take a break before continuing playing as well as let the user go back to the home screen. 
+Void PausingGame (pauseTheGame == true)
+START
+Play game == paused
+Rectangle (backhomeButton)
+	IF (backhomebuttonpressed = true)
+		START
+		Homescreen = true
+		Play = false
+		END
+END
+
+
+Void winningScreen()
+When the player defeats the final opponent this method will start the winning screen that will congratulate the player on their victory and allow for a return to the home screen for the player to play again
+The winning Screen will be displayed when both previous opponents have been defeated and the player defeats the final boss. It will congratulate the player and allow them to return home to play again.
+winningScreen (winningScreen = true)
+START
+Background (winning background)
+Text (“you win”)
+Rectangle (backhomeButton)
+	IF (backhomebuttonpressed = true)
+		START
+		Homescreen = true
+		Play = false
+		END
+END
+
+
+Void HomeScreen()
+When the code starts this method will create the home screen that can bring to the games start. It will have the game's title and two buttons. One leads to the games start and the other leads to the upgrade screen
+This method is true when starting the game and is false when other screens are active. It has mainly rectangles and text in the function. When the home screen button is pressed mid game it will act as a restart button. 
+Void homeScreen()
+START
+background (alley image)
+Rectangle start (Play button)
+images (Paw Icons)
+title image 
+EN
+KeyPressed()
+When certain keys are pressed they will have specific functions such as the R key having the ability to restart the game completely
+This will be used for the restart button
+KeyPressed()
+START
+	IF( R key is pressed)
+		START
+		RestartGame = true
+		END
+END
+
+
+
+
+
+
+
+
