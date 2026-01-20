@@ -1,0 +1,297 @@
+Pseudocode
+
+Void draw 
+START
+(while (boolean) homeScreen = true) //It starts true
+HomeScreen Method()
+IF (start button pressed “start == true”)
+	START
+	homeScreen = false
+background (white background)
+character icon image 1
+Rectangle 1 (Use character 1 button)
+Text (“use character”)
+character icon image 2
+Rectangle 2 (Use character 2 button)
+Text (“use character”)
+character icon image 3
+Rectangle 3 (Use character 3 button)
+Text (“use character”)
+title image (choose character)
+RectangleBackCharacter (backbutton)
+		IF (mouseX,mouseY,character icon image 1 X, character icon image 1 Y)
+			START
+			Rectangle ( menu shape)
+			Text (character 1 description )
+			END
+		IF (mouseX,mouseY,character icon image 2 X, character icon image 2 Y)
+			START
+			Rectangle ( menu shape)
+			Text (character 2 description )
+			END
+		IF (mouseX,mouseY,character icon image 3 X, character icon image 3 Y)
+			START
+			Rectangle ( menu shape)
+			Text (character 3 description )
+			END
+		IF (BackbuttoncharacterChoice = true)
+			START
+			homeScreen = true
+			END
+	  END
+IF (UpgradeButtonPressed == True)
+START
+homeScreen = false
+(boolean)LoadUpgradeScreen = True
+END
+ IF (play == true)
+START
+PImage Background 
+Image playerCharacter
+Image Opponent1
+rectangle text 1(For text Bubble)
+Text (Information about Opponent)
+Rectangle (reset Button)
+Image (pause button)
+IF ( playerGo == true)
+	START
+	Image paw button 1
+IF(buttonsClicked == true)
+	IF (Button1pressed == true)
+		START
+		(int) opponentDamage = opponentDamage - (int)damage
+		END
+IF (Button2pressed == true)
+	START
+		(int) opponentDamage = opponentDamage - (int)damage
+			END
+IF (Button3pressed == true)
+	START
+		(int) opponentDamage = opponentDamage - (int)damage
+		END
+END
+IF(FinishMove==true)
+	START
+opponentFightpose1
+Image paw button defense 1
+END
+IF (defenseComplete ==true)
+	START
+	playerGo = true
+	END
+	IF(opponentsDamage <= 0)
+		START
+		LevelUpdate = True
+		IF (opponent ==  FinalBoss)
+			START
+			WinningScreen = true
+			Play = false
+			END
+		END
+IF (playerHealth <= 0)
+	START
+endScreen = true
+	END
+END
+
+END
+
+Mouse Pressed()
+START
+IF (MouseX and MouseY press “rectangle start”)
+	START
+	Return (boolean) Start = true;
+	END
+IF(MouseX and MouseY press “UpgradeButton”)
+	START
+(boolean)UpgradeButtonPressed = True
+	END
+IF ((start button pressed “start == true”) and (MouseX and MouseY pressed RectangleBackCharacter))
+	START
+	BackbuttoncharacterChoice = true
+	END
+IF((endScreen = true) and (MouseX and MouseY press BackHomeButton))
+	START
+	(backHomePressed = true)
+	END
+IF ((pauseTheGame == true) and (mouseX and mouseY pressed backhomeButton))
+	START
+	backhomebuttonpressed = true
+	END
+IF (MouseX and MouseY press “Rectangle 1”)
+	START
+PImage playerCharacter = “character icon image 1”
+PImage Opponent1 = “character icon image 2”
+PImage Opponent2 = “ character icon image 3”
+Return (boolean) play = true
+PIMAGE background = “battle 1 image”
+END
+IF (MouseX and MouseY press “Rectangle 2”)
+	START
+PImage playerCharacter = “character icon image 2”
+PImage Opponent1 = “character icon image 1”
+PImage Opponent2 = “character icon image 3”
+Return (boolean) play = true
+END
+IF (MouseX and MouseY press “Rectangle 3”)
+START
+PImage playerCharacter = “character icon image 3”
+PImage Opponent1 = “character icon image 1”
+PImage Opponent2 = “character icon image 2”
+Return (boolean) play = true
+END
+IF (Mouse X and MouseY press “rectangle text 1”)
+	START
+	(boolean)playerGO = start
+	END
+IF(MouseX and MouseY press “ Image paw button 1”)
+	START
+		Image paw button 
+		Image CharaterFightPose1
+		(boolean)Button1pressed == true
+		IF(MouseX and MouseY press “ Image paw button 1”)
+			START
+			Image paw button 2
+			Image CharaterFightPose2
+			(boolean)Button2pressed == true
+			END
+			IF(MouseX and MouseY press “ Image paw button 1”)
+				START
+				Image Opponent
+				(boolean) finishMove = true
+				(boolean)Button3pressed == true
+				END
+
+
+	END
+IF(MouseX and MouseY press “ Image paw button defense 1”)
+	START
+	Image paw button defense 2
+	END
+	IF(MouseX and MouseY press “ Image paw button defense 1”)
+		START
+		Image paw button defense 3
+		END
+	ELSE 
+		(int)playerHealth = playerHealth - damage
+
+		IF(MouseX and MouseY press “ Image paw button defense 1”)
+			START
+			Image paw button defense 4
+			(boolean)DefenseComplete = true
+			END
+		ELSE
+(int)playerHealth = playerHealth - opponentDamage
+ELSE
+	START
+(int)playerHealth = playerHealth - damage
+END
+IF ((LoadUpgradeScreen == True) and ( MouseX and MouseY press SkillButton) and ((int)bones >= 100))
+	START
+(boolean)SkillButtonPressed = true
+END
+IF ((LoadUpgradeScreen == True) and ( MouseX and MouseY press DamageButton) and ((int)bones >= 100))
+	START
+(boolean)DamageButtonPressed  = true
+END
+IF ((LoadUpgradeScreen == True) and ( MouseX and MouseY press HealthButton) and ((int)bones >= 100))
+	START
+(boolean)HealthButtonPressed = true
+END
+IF ((play =true) and (mouseX and MouseY pressed ResetButton)
+	START
+	Restart = true
+	END
+END
+
+Boolean LevelUpdation (levelupdate == True)
+START
+Background = (change to next in array)
+Opponent = Opponent 2 or FinalBoss (array)
+Opponent health = opponent health + Healthupdate
+OpponentDamage = OpponentDamage + DamageUpdation
+END
+
+UpgradeScreen (LoadUpgradeScreen == True)
+START
+Background (white screen)
+Rectangles x3 (buttons for upgrading special Skill, overall damage, health)
+Text x3 (on rectangles explaining buttons)
+IF (SkillButtonPressed == true)
+	START
+	(int)bones = bones – 100
+	Skilldamage =Skill Damage + SkillUpgrade
+	END
+IF (DamageButtonPressed == true)
+	START
+	(int)bones = bones – 100
+	playerDamage = playerDamage + DamageUpgrade
+	END
+IF (HealthButtonPressed == true)
+	START
+	(int)bones = bones – 100
+	playerHealth =playerHealth + HealthUpgrade
+	END
+IF (BackbuttoncharacterChoice = true)
+	START
+	homeScreen = true
+	END
+
+END
+
+Void endingScreen (endScreen = true)
+START
+Background (ending background)
+Text (“you lose”)
+Rectangle (BackHomeButton)
+IF (backHomePressed = true)
+	START
+	HomeScreen = true
+	END
+END
+
+Boolean RestartGame (restartGame == true)
+START
+Reset Character damage
+Reset Character Health
+Reset opponent health
+Reset background
+END
+
+Void PausingGame (pauseTheGame == true)
+START
+Play game == paused
+Rectangle (backhomeButton)
+	IF (backhomebuttonpressed = true)
+		START
+		Homescreen = true
+		Play = false
+		END
+END
+winningScreen (winningScreen = true)
+START
+Background (winning background)
+Text (“you win”)
+Rectangle (backhomeButton)
+	IF (backhomebuttonpressed = true)
+		START
+		Homescreen = true
+		Play = false
+		END
+END
+
+KeyPressed()
+START
+	IF( R key is pressed)
+		START
+		RestartGame = true
+		END
+END
+
+Void homeScreen()
+START
+background (alley image)
+Rectangle start (Play button)
+images (Paw Icons)
+title image 
+END
