@@ -14,10 +14,11 @@ My Methods Table
 My PseudoCode
 
 Game Images
+
 <img width="238" height="311" alt="image" src="https://github.com/user-attachments/assets/b6e53bbd-e086-44bc-9ead-33efc665d28c" />
 
 
-Reflection Questions:[Reflection #2](./second_reflection.md)
+Reflection Questions:[Reflection #2](./posts/second_reflection.md)
 
 
 ## About me
