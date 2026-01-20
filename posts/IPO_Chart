@@ -1,0 +1,37 @@
+Input
+Process
+Output
+Method Type 
+Player can choose  upgrade screen or to move to character selection 
+Mouse pressed function will check for collision between the mouse and the buttons
+Either the code will load up the upgrade 
+HomeScreen()
+mousePressed()
+Player Selecting Character option 
+Checking for collision between mouse and character selection button 
+The player will start the fight sequence using the character of their selection 
+mousePressed()
+Player presses the pausing button 
+The pause code method will start and change the play boolean to create a pause and load the pause screen
+The player will reach a screen that displays 2 options, continue playing the game or go back to the home screen. 
+PausingGame()
+mousePressed()
+Player presses the R key therefore restarting the game 
+The restart function will reset variables 
+The player will restart the game starting from their first battle which will delete past progress.
+RestartGame()
+KeyPressed()
+
+
+Player will choose to update a skill
+The code will subtract some of the currency and add the rate in increase to that increased skill
+The players character will have an increase in that skill
+UpgradeScreen()
+mousePressed()
+Once the fights have been complete and the player presses next button
+The code will use the levelUpdation method to increase the skills for the next opponent and reset needed variables 
+The user will be brought to the next fight level
+LevelUpdation()
+mousePressed()
+
+
