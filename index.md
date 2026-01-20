@@ -11,7 +11,7 @@ My IPO chart
 
 My Methods Table
 
-My PseudoCode
+My PseudoCode: [code](./posts/PseudoCode_)
 
 Game Images
 
